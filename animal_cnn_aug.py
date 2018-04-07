@@ -41,7 +41,7 @@ def model_train(X, Y):
 	# 一番大きい値を取り出す。特徴を際立たせる
 	model.add(MaxPooling2D(pool_size=(2, 2)))
 	# 25％以下は捨てる データの偏りは捨てる
-	model.add(Dropout(0.25))
+	model.add(Dropout(0.35))
 
 	# 64のフィルターを持っている
 	model.add(Conv2D(64, (3, 3), padding='same'))
